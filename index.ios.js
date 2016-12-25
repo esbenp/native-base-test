@@ -8,25 +8,38 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
+import Test from './test'
+import {
+  Button,
+  Container,
+  Content,
+  InputGroup,
+  Input,
+  List,
+  ListItem,
+  Icon,
+  Text
+} from 'native-base'
 
 export default class NativeBaseTest extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      <Container>
+        <Content>
+          <List>
+            <ListItem>
+              <Test />
+            </ListItem>
+            <ListItem>
+              <InputGroup>
+                <Input inlineLabel label="Some label" placeholder="What the devil" />
+              </InputGroup>
+            </ListItem>
+          </List>
+        </Content>
+      </Container>
     );
   }
 }
